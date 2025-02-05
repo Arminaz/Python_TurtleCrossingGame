@@ -11,7 +11,9 @@ class Player(Turtle):
         super().__init__()
         self.penup()
         self.shape("turtle")
+        self.setheading(90)
         self.goto(STARTING_POSITION)
 
     def move_up(self):
-        
+        go_to_cord = (0, self.ycor()+MOVE_DISTANCE)
+        self.goto(go_to_cord)

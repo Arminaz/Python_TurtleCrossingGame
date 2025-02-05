@@ -19,3 +19,7 @@ game_is_on = True
 while game_is_on:
     time.sleep(0.1)
     screen.update()
+
+    if player.ycor() > 280:
+        scoreboard.add_level()
+        player.reset_position()
